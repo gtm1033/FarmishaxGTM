@@ -93,7 +93,7 @@ export default function Header() {
                                 <DropdownMenu modal={false} >
                                     <DropdownMenuTrigger className="outline-none">
                                         <span className="flex items-center gap-1 text-sm outline-none text-black font-medium hover:text-green3" >
-                                            Products <img src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
+                                            Products <Image height={18} width={18} src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
                                         </span>
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent >
@@ -111,7 +111,7 @@ export default function Header() {
                                 <DropdownMenu modal={false} >
                                     <DropdownMenuTrigger className="outline-none">
                                         <span className="flex items-center gap-1 text-sm outline-none text-black font-medium hover:text-green3">
-                                            AI Solutions <img src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
+                                            AI Solutions <Image height={18} width={18} src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
                                         </span>
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent >
@@ -160,7 +160,7 @@ export default function Header() {
                     <DropdownMenu modal={false} >
                         <DropdownMenuTrigger className="outline-none">
                             <span className="flex items-center gap-1 text-sm outline-none text-black font-medium hover:text-green3" >
-                                Products <img src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
+                                Products <Image height={18} width={18} src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
                             </span>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent >
@@ -178,7 +178,7 @@ export default function Header() {
                     <DropdownMenu modal={false} >
                         <DropdownMenuTrigger className="outline-none">
                             <span className="flex items-center gap-1 text-sm outline-none text-black font-medium hover:text-green3">
-                                AI Solutions <img src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
+                                AI Solutions <Image height={18} width={18} src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
                             </span>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent >
