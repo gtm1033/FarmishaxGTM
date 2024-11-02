@@ -8,6 +8,7 @@ import {
     CarouselPrevious,
     CarouselApi,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 const Features = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -76,7 +77,7 @@ const Features = () => {
                             >
                                 <div className="flex flex-col items-center justify-start px-1.5 md:px-4">
                                     <div className="text-lg pt-2 md:pt-4 font-semibold text-head">{feature?.head}</div>
-                                    <img src={feature?.icon} alt="icon" className="!p-0 w-32 h-28 md:w-40 md:h-40" />
+                                    <Image src={feature?.icon} alt="icon" height={160} width={160} className="!p-0 w-32 h-28 md:w-40 md:h-40" />
                                     <div className="text-gray text-sm text-center">{feature?.desc}</div>
                                 </div>
                             </CarouselItem>

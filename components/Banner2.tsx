@@ -1,10 +1,11 @@
+import Image from "next/image";
 import { FaPlayCircle } from "react-icons/fa";
 const Banner2 = () => {
     return (
         <div className="w-screen relative">
         <div className="w-full p-7 lg:p-10 bg-green1 flex flex-col lg:flex-row justify-center items-center gap-4  ">
             <div className="relative w-full py-4 lg:py-auto px-5 lg:px-10 flex-gtm-center text-3xl text-head font-semibold">
-                <img src="/assets/Intro1.svg" alt="OurHomeGarden_Video" className="bg-cover"/>
+                <Image src="/assets/Intro1.svg" alt="OurHomeGarden_Video"  height={500} width={500} className="bg-cover"/>
                 <span className="absolute w-full flex-gtm-center">
                     <a href="https://www.youtube.com/watch?v=W0DM5lcj6mw" target="_blank" rel="noreferrer">
                     <FaPlayCircle className="cursor-pointer text-white h-9 w-9 lg:h-12 lg:w-12 drop-shadow-lg hover:scale-[1.03]"/>

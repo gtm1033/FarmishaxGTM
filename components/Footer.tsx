@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link'
 import {   FaInstagram , FaYoutube, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -6,7 +7,7 @@ const Footer = () => {
         <div className='w-screen relative -mx-2 sm:-mx-12 lg:-mx-20'>
         <div className="w-full px-6 sm:px-10 lg:px-20 pt-10 pb-3 lg:pb-6 bg-green1 flex flex-col items-center justify-center gap-2  ">
             <div className="w-full flex justify-center md:justify-start mb-1.5 md:mb-3">
-                <img src="/assets/Logo.svg" alt="FarmIsha_Logo" className='w-[130px] h-[40px] lg:w-[190px] lg:h-[55px]' />
+                <Image src="/assets/Logo.svg" alt="FarmIsha_Logo" height={55} width={190} className='w-[130px] h-[40px] lg:w-[190px] lg:h-[55px]' />
             </div>
             <div className="w-full flex flex-col md:flex-row items-start justify-between">
                 <div className=" w-full flex text-head pt-1 md:pt-4 text-sm lg:text-base text-center md:text-start pr-0 lg:pr-40" >

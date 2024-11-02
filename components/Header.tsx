@@ -17,6 +17,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
+import Image from "next/image";
 
 
 export default function Header() {
@@ -62,19 +63,19 @@ export default function Header() {
             <div className="w-full bg-white  flex justify-between items-center py-1 ">
                 <div className="w-full lg:w-auto flex-gtm-center relative  ">
                     <Link href="/" className="hover:scale-[1.03] duration-200 flex-gtm-center">
-                        <img src="/assets/Logo.svg" alt="FarmIsha_Logo" className="w-[130px] h-[40px] lg:w-[190px] lg:h-[55px] cursor-pointer " />
+                        <Image src="/assets/Logo.svg" alt="FarmIsha_Logo" height={55} width={190} className="w-[130px] h-[40px] lg:w-[190px] lg:h-[55px] cursor-pointer " />
                     </Link>
 
                     <Sheet modal={false} >
                         <SheetTrigger >
                             <span className="absolute h-full left-0 top-0 flex-gtm-center lg:!hidden cursor-pointer ">
-                                <img src="/assets/sheet-trigger.svg" alt="sheet_trigger" className="hover:scale-y-[1.2] duration-700" />
+                                <Image src="/assets/sheet-trigger.svg" alt="sheet_trigger" height={20} width={25} className="hover:scale-y-[1.2] duration-700" />
                             </span>
                         </SheetTrigger>
                         <SheetContent side="left">
                             <SheetHeader>
                                 <SheetTitle> <Link href="/" className="hover:scale-[1.03] duration-200">
-                                    <img src="/assets/Logo.svg" alt="FarmIsha_Logo" className="w-[130px] h-[40px] cursor-pointer " />
+                                    <Image src="/assets/Logo.svg" alt="FarmIsha_Logo"  height={40} width={130} className="w-[130px] h-[40px] cursor-pointer " />
                                 </Link></SheetTitle>
                                 {/* <SheetDescription className="!font-semibold  !py-10 text-2xl">
                                     Menu

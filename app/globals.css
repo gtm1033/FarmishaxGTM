@@ -95,14 +95,14 @@ body {
   --slide-size: 90%;
 }
 
-/* .embla__viewport {
-  /* overflow: hidden; 
+ .embla__viewport {
+ overflow: hidden; 
 
-} */
+} 
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
-  overflow: hidden;
+  overflow: hidden !important;
   
 }
 .embla__slide {
