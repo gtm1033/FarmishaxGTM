@@ -1,0 +1,800 @@
+[
+    {
+        "Season": "Warm",
+        "Plant": "Beans",
+        "pH": {
+            "min": 6.0,
+            "max": 6.5
+        },
+        "PPM": {
+            "min": 1400,
+            "max": 2800
+        },
+        "DaysToMaturity": {
+            "min": 85,
+            "max": 120
+        },
+        "Temperature": {
+            "min": 21.1,
+            "max": 29.4
+        },
+        "PlaceOnTower": "Bottom or Middle w/ support"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Cucumber",
+        "pH": {
+            "min": 5.5,
+            "max": 6.0
+        },
+        "PPM": {
+            "min": 1190,
+            "max": 1750
+        },
+        "DaysToMaturity": {
+            "min": 50,
+            "max": 70
+        },
+        "Temperature": {
+            "min": 18.3,
+            "max": 29.4
+        },
+        "PlaceOnTower": "Bottom w/ support"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Melon",
+        "pH": {
+            "min": 5.5,
+            "max": 6.0
+        },
+        "PPM": {
+            "min": 1400,
+            "max": 1700
+        },
+        "DaysToMaturity": {
+            "min": 80,
+            "max": 100
+        },
+        "Temperature": {
+            "min": 21.1,
+            "max": 32.2
+        },
+        "PlaceOnTower": "Bottom w/ support"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Okra",
+        "pH": {
+            "min": 6.5,
+            "max": 6.5
+        },
+        "PPM": {
+            "min": 1400,
+            "max": 1680
+        },
+        "DaysToMaturity": {
+            "min": 50,
+            "max": 65
+        },
+        "Temperature": {
+            "min": 23.9,
+            "max": 32.2
+        },
+        "PlaceOnTower": "Bottom w/ support"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Peppers",
+        "pH": {
+            "min": 6.0,
+            "max": 6.5
+        },
+        "PPM": {
+            "min": 1400,
+            "max": 2000
+        },
+        "DaysToMaturity": {
+            "min": 60,
+            "max": 90
+        },
+        "Temperature": {
+            "min": 21.1,
+            "max": 32.2
+        },
+        "PlaceOnTower": "Bottom or Middle w/ support"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Pumpkin",
+        "pH": {
+            "min": 5.5,
+            "max": 7.5
+        },
+        "PPM": {
+            "min": 1260,
+            "max": 1680
+        },
+        "DaysToMaturity": {
+            "min": 90,
+            "max": 100
+        },
+        "Temperature": {
+            "min": 21.1,
+            "max": 32.2
+        },
+        "PlaceOnTower": "Bottom"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Summer Squash",
+        "pH": {
+            "min": 5.0,
+            "max": 6.0
+        },
+        "PPM": {
+            "min": 1260,
+            "max": 1680
+        },
+        "DaysToMaturity": {
+            "min": 50,
+            "max": 65
+        },
+        "Temperature": {
+            "min": 21.1,
+            "max": 29.4
+        },
+        "PlaceOnTower": "Bottom w/ support"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Tomatillo",
+        "pH": {
+            "min": 6.0,
+            "max": 6.5
+        },
+        "PPM": {
+            "min": 1400,
+            "max": 3500
+        },
+        "DaysToMaturity": {
+            "min": 80,
+            "max": 80
+        },
+        "Temperature": {
+            "min": 21.1,
+            "max": 29.4
+        },
+        "PlaceOnTower": "Bottom w/ support"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Tomato",
+        "pH": {
+            "min": 6.0,
+            "max": 6.5
+        },
+        "PPM": {
+            "min": 1400,
+            "max": 3500
+        },
+        "DaysToMaturity": {
+            "min": 100,
+            "max": 100
+        },
+        "Temperature": {
+            "min": 21.1,
+            "max": 29.4
+        },
+        "PlaceOnTower": "Bottom w/ support"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Watermelon",
+        "pH": {
+            "min": 5.8,
+            "max": 5.8
+        },
+        "PPM": {
+            "min": 1260,
+            "max": 1680
+        },
+        "DaysToMaturity": {
+            "min": 65,
+            "max": 90
+        },
+        "Temperature": {
+            "min": 21.1,
+            "max": 32.2
+        },
+        "PlaceOnTower": "Bottom"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Zucchini",
+        "pH": {
+            "min": 6.0,
+            "max": 6.0
+        },
+        "PPM": {
+            "min": 1260,
+            "max": 1680
+        },
+        "DaysToMaturity": {
+            "min": 35,
+            "max": 55
+        },
+        "Temperature": {
+            "min": 21.1,
+            "max": 29.4
+        },
+        "PlaceOnTower": "Bottom w/ support"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Beans (1900-2100 PPM)",
+        "pH": {
+            "min": 6.0,
+            "max": 6.5
+        },
+        "PPM": {
+            "min": 1400,
+            "max": 2800
+        },
+        "DaysToMaturity": {
+            "min": 85,
+            "max": 120
+        },
+        "Temperature": {
+            "min": 21.1,
+            "max": 29.4
+        },
+        "PlaceOnTower": "Bottom or Middle w/ support"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Broccoli",
+        "pH": {
+            "min": 6.0,
+            "max": 6.8
+        },
+        "PPM": {
+            "min": 1960,
+            "max": 2450
+        },
+        "DaysToMaturity": {
+            "min": 100,
+            "max": 150
+        },
+        "Temperature": {
+            "min": 18.3,
+            "max": 23.9
+        },
+        "PlaceOnTower": "Bottom or Middle"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Brussels Sprouts",
+        "pH": {
+            "min": 6.5,
+            "max": 7.5
+        },
+        "PPM": {
+            "min": 1750,
+            "max": 2100
+        },
+        "DaysToMaturity": {
+            "min": 100,
+            "max": 110
+        },
+        "Temperature": {
+            "min": 18.3,
+            "max": 23.9
+        },
+        "PlaceOnTower": "Bottom"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Eggplant",
+        "pH": {
+            "min": 5.5,
+            "max": 6.5
+        },
+        "PPM": {
+            "min": 1750,
+            "max": 2450
+        },
+        "DaysToMaturity": {
+            "min": 100,
+            "max": 150
+        },
+        "Temperature": {
+            "min": 21.1,
+            "max": 32.2
+        },
+        "PlaceOnTower": "Bottom or Middle w/ support"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Peppers (1900-2100 PPM)",
+        "pH": {
+            "min": 6.0,
+            "max": 6.5
+        },
+        "PPM": {
+            "min": 1400,
+            "max": 2000
+        },
+        "DaysToMaturity": {
+            "min": 60,
+            "max": 90
+        },
+        "Temperature": {
+            "min": 21.1,
+            "max": 32.2
+        },
+        "PlaceOnTower": "Bottom or Middle w/ support"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Cauliflower",
+        "pH": {
+            "min": 6.5,
+            "max": 7.0
+        },
+        "PPM": {
+            "min": 1400,
+            "max": 2800
+        },
+        "DaysToMaturity": {
+            "min": 100,
+            "max": 140
+        },
+        "Temperature": {
+            "min": 18.3,
+            "max": 23.9
+        },
+        "PlaceOnTower": "Bottom"
+    },
+    {
+        "Season": "Warm",
+        "Plant": "Kale",
+        "pH": {
+            "min": 6.0,
+            "max": 7.0
+        },
+        "PPM": {
+            "min": 1750,
+            "max": 2450
+        },
+        "DaysToMaturity": {
+            "min": 50,
+            "max": 80
+        },
+        "Temperature": {
+            "min": 10.0,
+            "max": 20.0
+        },
+        "PlaceOnTower": "Bottom"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Arugula",
+        "pH": {
+            "min": 6.0,
+            "max": 7.0
+        },
+        "PPM": {
+            "min": 560,
+            "max": 840
+        },
+        "DaysToMaturity": {
+            "min": 45,
+            "max": 60
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Middle or Top"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Artichoke",
+        "pH": {
+            "min": 6.5,
+            "max": 7.5
+        },
+        "PPM": {
+            "min": 560,
+            "max": 1260
+        },
+        "DaysToMaturity": {
+            "min": 730,
+            "max": 730
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Bottom"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Calendula",
+        "pH": {
+            "min": 6.0,
+            "max": 6.0
+        },
+        "PPM": {
+            "min": 600,
+            "max": 800
+        },
+        "DaysToMaturity": {
+            "min": 45,
+            "max": 60
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Bottom"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Cilantro",
+        "pH": {
+            "min": 5.8,
+            "max": 6.4
+        },
+        "PPM": {
+            "min": 600,
+            "max": 800
+        },
+        "DaysToMaturity": {
+            "min": 30,
+            "max": 30
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Bottom or Middle"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Coriander",
+        "pH": {
+            "min": 5.8,
+            "max": 6.4
+        },
+        "PPM": {
+            "min": 600,
+            "max": 800
+        },
+        "DaysToMaturity": {
+            "min": 45,
+            "max": 45
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Bottom or Middle"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Dandelion",
+        "pH": {
+            "min": 6.4,
+            "max": 6.4
+        },
+        "PPM": {
+            "min": 600,
+            "max": 800
+        },
+        "DaysToMaturity": {
+            "min": 9,
+            "max": 15
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Middle or Top"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Fennel",
+        "pH": {
+            "min": 6.4,
+            "max": 6.8
+        },
+        "PPM": {
+            "min": 700,
+            "max": 980
+        },
+        "DaysToMaturity": {
+            "min": 80,
+            "max": 115
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Top"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Lemon Balm",
+        "pH": {
+            "min": 5.5,
+            "max": 6.5
+        },
+        "PPM": {
+            "min": 700,
+            "max": 1120
+        },
+        "DaysToMaturity": {
+            "min": 70,
+            "max": 70
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Bottom or Middle"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Lettuce",
+        "pH": {
+            "min": 5.5,
+            "max": 6.0
+        },
+        "PPM": {
+            "min": 560,
+            "max": 840
+        },
+        "DaysToMaturity": {
+            "min": 42,
+            "max": 55
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Middle or Top"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Menarda",
+        "pH": {
+            "min": 5.5,
+            "max": 6.0
+        },
+        "PPM": {
+            "min": 600,
+            "max": 1200
+        },
+        "DaysToMaturity": {
+            "min": 110,
+            "max": 120
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Bottom or Middle"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Mustard Greens",
+        "pH": {
+            "min": 6.0,
+            "max": 7.5
+        },
+        "PPM": {
+            "min": 600,
+            "max": 1000
+        },
+        "DaysToMaturity": {
+            "min": 30,
+            "max": 40
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Middle or Top"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Nasturtiums",
+        "pH": {
+            "min": 6.0,
+            "max": 7.5
+        },
+        "PPM": {
+            "min": 700,
+            "max": 1000
+        },
+        "DaysToMaturity": {
+            "min": 35,
+            "max": 52
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Bottom or Middle"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Oregano",
+        "pH": {
+            "min": 6.0,
+            "max": 7.5
+        },
+        "PPM": {
+            "min": 750,
+            "max": 1000
+        },
+        "DaysToMaturity": {
+            "min": 45,
+            "max": 45
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Top or Middle"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Pansy",
+        "pH": {
+            "min": 5.7,
+            "max": 6.2
+        },
+        "PPM": {
+            "min": 375,
+            "max": 750
+        },
+        "DaysToMaturity": {
+            "min": 70,
+            "max": 104
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Top or Middle"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Parsley",
+        "pH": {
+            "min": 5.5,
+            "max": 6.0
+        },
+        "PPM": {
+            "min": 560,
+            "max": 1260
+        },
+        "DaysToMaturity": {
+            "min": 70,
+            "max": 90
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Middle or Top"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Romaine",
+        "pH": {
+            "min": 5.5,
+            "max": 6.0
+        },
+        "PPM": {
+            "min": 560,
+            "max": 840
+        },
+        "DaysToMaturity": {
+            "min": 45,
+            "max": 75
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Middle or Top"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Rosemary",
+        "pH": {
+            "min": 5.5,
+            "max": 6.0
+        },
+        "PPM": {
+            "min": 700,
+            "max": 1000
+        },
+        "DaysToMaturity": {
+            "min": 80,
+            "max": 80
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Top"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Spinach",
+        "pH": {
+            "min": 6.0,
+            "max": 7.0
+        },
+        "PPM": {
+            "min": 600,
+            "max": 800
+        },
+        "DaysToMaturity": {
+            "min": 40,
+            "max": 60
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Middle or Top"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Thyme",
+        "pH": {
+            "min": 6.0,
+            "max": 7.0
+        },
+        "PPM": {
+            "min": 560,
+            "max": 840
+        },
+        "DaysToMaturity": {
+            "min": 70,
+            "max": 70
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Top"
+    },
+    {
+        "Season": "Cool",
+        "Plant": "Zinnia",
+        "pH": {
+            "min": 5.5,
+            "max": 6.5
+        },
+        "PPM": {
+            "min": 450,
+            "max": 750
+        },
+        "DaysToMaturity": {
+            "min": 50,
+            "max": 75
+        },
+        "Temperature": {
+            "min": 10,
+            "max": 20
+        },
+        "PlaceOnTower": "Middle or Top"
+    }
+]

@@ -10,7 +10,47 @@ import 'react-phone-input-2/lib/style.css'
 function Intro() {
   const path = usePathname()
   const [phoneNumber, setPhoneNumber] = useState('')
+  const [pwd , setPwd] = useState('')
+  const [msg, setMsg] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [favourableCrops, setFavourableCrops] = useState<any>()
   const [slides, setSlides] = useState<{ image: string, alt: string }[] | null>(null)
+
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // console.log('Sending login data:', phoneNumber , pwd, msg );
+    setLoading(true)
+    try {
+        const response = await fetch('/api/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ phone : phoneNumber,password : pwd }),
+            mode : 'no-cors'
+        });
+        const data = await response.json();
+      
+        if (response.ok) {
+            setMsg('Login successful!');
+              console.log('\nData from login api - ' , data )
+              
+    //-----------CROP/ FAVOURALE CROP DATA IDHAR-------------------------
+    const cropData = await fetch(`/api/crops`, {method:'GET'})
+    const crops = await cropData.json()
+     const favourableCrops = crops.filter((crop : any) => ((Number(data.temperature) - 273.15) >= Number(crop.Temperature.min ) && (Number(data.temperature) - 273.15) <= Number(crop.Temperature.max) ))
+     console.log('Favourable Crops- ' , favourableCrops)
+     setLoading(false)
+     setFavourableCrops(favourableCrops)
+
+        } else {
+            setMsg(data.message || 'Login failed');
+          }
+          console.log(msg)
+    } catch (error) {
+        setMsg('An error occurred');
+    }
+    setMsg('')
+};
 
   useEffect(() => {
     const loadSlides = async () => {
@@ -28,7 +68,7 @@ function Intro() {
   }, [])
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row justify-between items-center h-full lg:h-[550px]">
+    <div className="flex flex-col-reverse lg:flex-row justify-between items-center h-full  py-10">
       <div className="w-full flex flex-col items-center lg:items-start justify-start gap-y-5 lg:gap-y-10">
         <div className="w-full flex flex-col text-xl sm:text-3xl lg:text-5xl text-center lg:text-start font-bold pt-5 lg:pt-0">
           <span className="text-head tracking-wide pb-1">Future Ready Farming For</span>
@@ -38,21 +78,47 @@ function Intro() {
           FarmIsha brings you sustainable hydroponic<br />farming solutions for fresh, soil-free<br />produce year-round.
         </div>
         {path === "/login" ? (
-          <div className="flex-gtm-center gap-4">
-            <form action="" className="space-x-0 lg:space-x-4 space-y-3 lg:space-y-0 flex flex-col lg:flex-row items-center justify-center">
+          <div className="flex flex-col items-center justify-center gap-4">
+            <form onSubmit={handleLogin} className="space-x-0 lg:space-x-4 space-y-3 lg:space-y-0 flex flex-col lg:flex-row items-center justify-center">
               <PhoneInput
                 country={'in'}
                 value={phoneNumber}
                 onChange={(value) => setPhoneNumber(value)}
                 containerClass="group !rounded-xl"
-                inputClass="border group-hover:!border-green3 !border-l-0 duration-200 !rounded-xl"
+                inputClass="border group-hover:!border-green3 !py-1 !border-l-0 duration-200 !rounded-xl"
                 buttonClass="border group-hover:!border-green3 !border-r-0 duration-200 !bg-white !rounded-l-xl hover:!bg-none"
                 placeholder="+XX XXXXXXXXXX"
               />
-              <Link href={"/"} className="font-semibold tracking-wide rounded-3xl px-6 py-2 bg-green3 hover:bg-green4 duration-200 text-white">
+
+              <input
+                type="password"
+                placeholder="Password"
+                value={pwd}
+                onChange={(e) => setPwd(e.target.value)}
+                className="w-full border !border-green3 !rounded-xl px-4 py-1 duration-200 outline-none"
+                />
+                <button type='submit' className='font-semibold tracking-wide rounded-3xl px-6 py-2 bg-green3 hover:bg-green4 duration-200 text-white'>Login</button>
+              {/* <Link href={"/"} className="font-semibold tracking-wide rounded-3xl px-6 py-2 bg-green3 hover:bg-green4 duration-200 text-white">
                 Login
-              </Link>
+              </Link> */}
             </form>
+
+            {loading && <span className="text-green3 gap-2 w-full flex-gtm-center">
+              <span className="border-4 !border-l-green3 border-green1 duration-1000 ease rounded-full h-7 w-7  animate-spin"></span>
+              <span className="text-green3 text-sm font-semibold">Fetching favourable crops in your area ...</span>
+              </span>}
+            {
+              favourableCrops && <div className='pb-10 '>
+                <h1 className="text-center py-2 text-green4 font-medium">Favourable Crops</h1>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+                  {favourableCrops?.map((crop : any, index : any ) => (
+                    <span key={index} className="px-3 py-1 rounded bg-green1 text-green3 text-sm font-medium text-center">{crop.Plant}</span>
+                  ))}
+                </div>
+              </div>
+             
+            }
+
           </div>
         ) : (
           <Link href={"/login"} className="mt-2 lg:mt-5 font-semibold tracking-wide rounded-3xl px-6 py-2 bg-green3 hover:bg-green4 duration-200 text-white text-sm lg:text-base">
