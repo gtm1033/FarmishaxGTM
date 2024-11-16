@@ -1,6 +1,9 @@
 'use client'
+import { useRouter } from "next/navigation"
 import { useState } from "react"
 import PhoneInput from 'react-phone-input-2'
+
+
 import 'react-phone-input-2/lib/style.css'
 
 function Register() {
@@ -9,6 +12,8 @@ function Register() {
   const [password, setPassword] = useState('')
   const [PIN, setPIN] = useState('')
   const [msg, setMsg] = useState('')
+  const [loading, setLoading] = useState()
+  const router = useRouter()
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,8 +29,13 @@ function Register() {
       const data = await response.json();
       if (response.ok) {
         setMsg('Registration successful!');
+        setLoading(false)
+        setTimeout(() => {
+          router.push('/login');
+        }, 3000);
       } else {
         setMsg(data.message || 'Registration failed');
+        setLoading(false)
       }
     } catch (error) {
       setMsg('An error occurred');
@@ -71,10 +81,15 @@ function Register() {
           className="!w-full  border !border-green3 !rounded-xl px-4 py-1  lg:w-80 duration-200 outline-none"
         />
 
-        <div className="w-full flex-gtm-center col-span-2">
-          <button type="submit" className=" font-semibold tracking-wide rounded-3xl px-6 py-2 bg-green3 hover:bg-green4 duration-200 text-white">
+        <div className="w-full flex flex-col items-center justify-center col-span-2">
+          <button type="submit" className=" font-semibold tracking-wide rounded-3xl px-6 py-2 bg-green3 hover:bg-green4 duration-200 text-white" onClick={()=>setLoading(true)}>
             Register
           </button>
+          {
+            loading 
+            ? <span className='flex-gtm-center gap-2 py-4'> <span className='border-4 rounded-full border-green2 border-l-green3  animate-spin h-5 w-5'></span> <p className='text-sm text-semibold text-head'>Registering ...</p> </span>
+            : <p className={`w-full text-center  ${msg==="Registration successful!" ? 'text-green3' : 'text-red-400'} text-sm py-4`}>{msg}. Redirecting you to login page... </p> 
+          }
         </div>
       </form>
     </div>

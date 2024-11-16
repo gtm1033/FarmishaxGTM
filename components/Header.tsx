@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { PiTreeFill } from "react-icons/pi";
+import { PiTreeFill, PiPlantFill, PiLeafFill } from "react-icons/pi";
+import { FaCaretDown } from "react-icons/fa";
 import { MdQuestionAnswer } from "react-icons/md";
 import {
     DropdownMenu,
@@ -135,10 +136,12 @@ export default function Header() {
                                 </Link>
 
                                 {/* ------ GETTING STARTED ----- */}
-                                <div className="absolute bottom-6 w-full p-2 flex-gtm-center ">
-                                    <Link href="/login" className="">
+                                <div className="absolute bottom-6 w-full gap-2 flex flex-col items-center justify-center">
+                                    {/* <Link href="/register" className="">
                                         <span className="bg-green3 hover:bg-green4 px-8 py-2 rounded-3xl text-white font-semibold text-sm duration-300">Get Started</span>
-                                    </Link>
+                                    </Link> */}
+                                        <Link href='/login' className="w-full bg-green1 text-green3 duration-300 rounded-md py-2 px-4  hover:drop-shadow-sm font-medium text-sm  flex-gtm-center gap-x-2">  Login</Link>
+                                        <Link href='/register' className="w-full bg-green3 text-white duration-300 rounded-md py-2 px-4 hover:drop-shadow-sm font-medium text-sm  flex-gtm-center gap-x-2"> Register</Link>
                                 </div>
 
                             </div>
@@ -193,17 +196,32 @@ export default function Header() {
                         </DropdownMenuContent>
                     </DropdownMenu>
 
-
-
                     <Link href="/crops">
                         <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">Hydroponics Crops</span>
                     </Link>
                     <Link href="/blogs">
                         <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">Blogs</span>
                     </Link>
-                    <Link href="/login">
-                        <span className="bg-green3 hover:bg-green4 px-4 py-2 rounded-3xl text-white font-semibold text-sm duration-300">Get Started</span>
-                    </Link>
+                   
+
+                    <DropdownMenu modal={false} >
+                        <DropdownMenuTrigger className="outline-none">
+                            <span className="bg-green3 hover:bg-green4 px-5 py-2 rounded-3xl text-white font-semibold text-sm duration-300 flex justify-between  gap-1">
+                                Get Started <FaCaretDown className="text-white text-lg"/>
+                            </span>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent >
+                           
+                                    <DropdownMenuItem  className=" hover:bg-[#06B612] hover:text-white ">
+                                        <a href='/login' className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"> <PiLeafFill/>  Login</a>
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem  className=" hover:bg-[#06B612] hover:text-white ">
+                                        <a href='/register' className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"><PiPlantFill/> Register</a>
+                                    </DropdownMenuItem>
+                               
+
+                        </DropdownMenuContent>
+                    </DropdownMenu>
 
                 </div>
 
