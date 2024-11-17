@@ -12,7 +12,7 @@ function Register() {
   const [password, setPassword] = useState('')
   const [PIN, setPIN] = useState('')
   const [msg, setMsg] = useState('')
-  const [loading, setLoading] = useState()
+  const [loading, setLoading] = useState<boolean>()
   const router = useRouter()
 
   const handleRegister = async (e: React.FormEvent) => {
@@ -28,7 +28,7 @@ function Register() {
 
       const data = await response.json();
       if (response.ok) {
-        setMsg('Registration successful!');
+        setMsg('Registration successful! . Redirecting you to login page...');
         setLoading(false)
         setTimeout(() => {
           router.push('/login');
@@ -88,7 +88,7 @@ function Register() {
           {
             loading 
             ? <span className='flex-gtm-center gap-2 py-4'> <span className='border-4 rounded-full border-green2 border-l-green3  animate-spin h-5 w-5'></span> <p className='text-sm text-semibold text-head'>Registering ...</p> </span>
-            : <p className={`w-full text-center  ${msg==="Registration successful!" ? 'text-green3' : 'text-red-400'} text-sm py-4`}>{msg}. Redirecting you to login page... </p> 
+            : <p className={`w-full text-center  ${msg.includes("Registration successful!") ? 'text-green3' : 'text-red-400'} text-sm py-4`}>{msg} </p> 
           }
         </div>
       </form>
