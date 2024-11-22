@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import PhoneInput from 'react-phone-input-2'
+import { IoEye } from "react-icons/io5"
 
 
 import 'react-phone-input-2/lib/style.css'
@@ -10,6 +11,7 @@ function Register() {
   const [fullName, setFullName] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
   const [password, setPassword] = useState('')
+  const [showPwd, setShowPwd] = useState(false)
   const [PIN, setPIN] = useState('')
   const [msg, setMsg] = useState('')
   const [loading, setLoading] = useState<boolean>()
@@ -66,13 +68,25 @@ function Register() {
           placeholder="+XX XXXXXXXXXX"
         />
 
-        <input
+        {/* <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="!w-full  border !border-green3 !rounded-xl px-4 py-1  lg:w-80 duration-200 outline-none"
-        />
+        /> */}
+        <span className="w-full relative overflow-hidden">
+                <input
+                  type={showPwd ? "text" : "password"}
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="h-full w-full border !border-green3 !rounded-xl px-4 py-1 duration-200 outline-none overflow-hidden pr-10"
+                />
+                <span className="absolute top-1/2 right-0 transform -translate-y-1/2 h-full w-8 flex-gtm-center   cursor-pointer" onClick={() => { setShowPwd(!showPwd) }}>
+                  <IoEye className={`${showPwd ? 'text-green3' : 'text-green2'} duration-300`} />
+                </span>
+                </span>
         <input
           type="text"
           placeholder="PIN Code"

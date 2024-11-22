@@ -14,13 +14,13 @@ export async function POST(request: Request) {
   responseHeaders.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
   try {
-    console.log('Login API try block called')
+    // console.log('Login API try block called')
     const { phone, password } = await request.json();
     await connectDB();
 
     const user = await User.findOne({ phone });
     if (!user || !(await bcrypt.compare(password, user.password))) {
-      return new NextResponse(JSON.stringify({ message: 'Invalid credentials' }), {
+      return new NextResponse(JSON.stringify({ message: 'Invalid credentials.' }), {
         status: 401,
         headers: responseHeaders,
       });
@@ -34,25 +34,35 @@ export async function POST(request: Request) {
     //--------------WEATHER / TEMPERATURE DATA IDHAR--------------------
     const apiKey = '6485203b725c252a2bd92c7b9304a635';
     const url = `https://api.openweathermap.org/data/2.5/weather?zip=${user?.PIN},in&appid=${apiKey}`;
-     const weather = await fetch (url, {method:'GET'})
+    const weather = await fetch(url, { method: 'GET' })
     //  console.log(weather)
-     const weatherData = await weather.json()
-     console.log(weatherData)
-      
-    //-----------CROP/ FAVOURALE CROP DATA IDHAR-------------------------
-    // const cropData = await fetch(`https://localhost:3000/api/crops`, {method:'GET'})
-    //  const crops = await cropData.json()
-    //   const favourableCrops = crops.filter((crop : any) => ((Number(weatherData.main.temp) - 273.15) >= Number(crop.Temperature.min ) && (Number(weatherData.main.temp) - 273.15) <= Number(crop.Temperature.max) ))
-    //   console.log('Favourable Crops- ' , favourableCrops)
-
-  //  console.log(user)
+    const weatherData = await weather.json()
+    //  console.log(weatherData)
+    
+    const userDetails = {
+  id: user?._id?.toString(),
+  name: user?.fullName,
+  // email: user?.email,
+  phone: user?.phone,
+  PIN: user?.PIN,
+  weather: {
+    description: weatherData?.weather[0]?.description, // Weather description
+    temperature: weatherData?.main?.temp, // Temperature
+    max_temp : weatherData?.main?.temp_max, // Max temperature
+    min_temp : weatherData?.main?.temp_min, // Min temperature
+    humidity: weatherData?.main?.humidity, // Humidity 
+    area: weatherData?.name, // area name
+  },
+};
+console.log(userDetails?.id , typeof userDetails?.id)
+console.log(user?._id, typeof user?._id)
 
     const response = new NextResponse(JSON.stringify(
       {
-        data: user,
-        message: 'Login successful',
-        weather : weatherData,
-        temperature : weatherData.main.temp,
+        data: userDetails,
+        message: 'Login successful!',
+        weather: weatherData,
+        temperature: weatherData.main.temp,
         // crops : favourableCrops
       }
     ), { status: 200, headers: responseHeaders, });
@@ -68,11 +78,11 @@ export async function POST(request: Request) {
 }
 
 
-export async function GET() {
-  await connectDB();
-  const users = await User.find(); // Example operation
-  return NextResponse.json(users);
-}
+// export async function GET() {
+//   await connectDB();
+//   const users = await User.find(); // Example operation
+//   return NextResponse.json(users);
+// }
 
 // Handle OPTIONS preflight request
 export async function OPTIONS() {

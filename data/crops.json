@@ -2,6 +2,7 @@
     {
         "Season": "Warm",
         "Plant": "Beans",
+        "image": "/assets/beans.jpeg",
         "pH": {
             "min": 6.0,
             "max": 6.5
@@ -18,11 +19,13 @@
             "min": 21.1,
             "max": 29.4
         },
-        "PlaceOnTower": "Bottom or Middle w/ support"
+        "PlaceOnTower": "Bottom or Middle w/ support",
+        "description": "Beans are a versatile crop that thrive in warm climates. Hydroponics enables precise nutrient delivery and consistent water supply, ensuring healthier plants and higher yields. Perfect for small spaces, hydroponic systems support vertical growth with minimal soil requirements."
     },
     {
         "Season": "Warm",
         "Plant": "Cucumber",
+        "image": "/assets/cucumber.jpeg",
         "pH": {
             "min": 5.5,
             "max": 6.0
@@ -39,11 +42,13 @@
             "min": 18.3,
             "max": 29.4
         },
-        "PlaceOnTower": "Bottom w/ support"
+        "PlaceOnTower": "Bottom w/ support",
+        "description": "Cucumbers grow exceptionally well in hydroponic systems, benefiting from controlled environments that promote rapid growth. These fast-maturing plants require minimal effort while delivering consistent yields, making them ideal for both beginners and seasoned growers."
     },
     {
         "Season": "Warm",
         "Plant": "Melon",
+        "image": "/assets/melon.jpeg",
         "pH": {
             "min": 5.5,
             "max": 6.0
@@ -60,11 +65,13 @@
             "min": 21.1,
             "max": 32.2
         },
-        "PlaceOnTower": "Bottom w/ support"
+        "PlaceOnTower": "Bottom w/ support",
+        "description": "Melons are a sweet and refreshing crop that thrive in warm temperatures. Hydroponic systems ensure optimal water and nutrient delivery, promoting faster growth and higher sugar content in the fruit. Ideal for controlled environments."
     },
     {
         "Season": "Warm",
         "Plant": "Okra",
+        "image": "/assets/okra.jpeg",
         "pH": {
             "min": 6.5,
             "max": 6.5
@@ -81,11 +88,13 @@
             "min": 23.9,
             "max": 32.2
         },
-        "PlaceOnTower": "Bottom w/ support"
+        "PlaceOnTower": "Bottom w/ support",
+        "description": "Okra, known for its versatility in cooking, benefits greatly from hydroponic growth. This warm-season crop grows faster and produces tender pods in nutrient-rich and well-maintained environments."
     },
     {
         "Season": "Warm",
         "Plant": "Peppers",
+        "image": "/assets/pepper.jpeg",
         "pH": {
             "min": 6.0,
             "max": 6.5
@@ -102,11 +111,13 @@
             "min": 21.1,
             "max": 32.2
         },
-        "PlaceOnTower": "Bottom or Middle w/ support"
+        "PlaceOnTower": "Bottom or Middle w/ support",
+        "description": "Peppers are a staple in many cuisines and thrive in hydroponic setups. With controlled conditions, they produce larger, more flavorful fruits while conserving space and resources."
     },
     {
         "Season": "Warm",
         "Plant": "Pumpkin",
+        "image": "/assets/pumpkin.jpeg",
         "pH": {
             "min": 5.5,
             "max": 7.5
@@ -123,11 +134,13 @@
             "min": 21.1,
             "max": 32.2
         },
-        "PlaceOnTower": "Bottom"
+        "PlaceOnTower": "Bottom",
+        "description": "Pumpkins flourish in hydroponic systems that ensure consistent nutrient supply. Ideal for warm seasons, they grow faster with robust vines and produce vibrant, healthy fruits."
     },
     {
         "Season": "Warm",
         "Plant": "Summer Squash",
+        "image": "/assets/summer_squash.jpeg",
         "pH": {
             "min": 5.0,
             "max": 6.0
@@ -144,11 +157,13 @@
             "min": 21.1,
             "max": 29.4
         },
-        "PlaceOnTower": "Bottom w/ support"
+        "PlaceOnTower": "Bottom w/ support",
+        "description": "Summer squash grows quickly in hydroponic systems, yielding tender, nutrient-rich fruits. Its controlled environment helps avoid soil-borne diseases and ensures steady production."
     },
     {
         "Season": "Warm",
         "Plant": "Tomatillo",
+        "image": "/assets/tomatillo.jpeg",
         "pH": {
             "min": 6.0,
             "max": 6.5
@@ -165,11 +180,13 @@
             "min": 21.1,
             "max": 29.4
         },
-        "PlaceOnTower": "Bottom w/ support"
+        "PlaceOnTower": "Bottom w/ support",
+        "description": "Tomatillos are a unique and flavorful addition to hydroponic farming. These plants grow efficiently in nutrient-controlled systems, producing vibrant fruits ideal for salsas and sauces."
     },
     {
         "Season": "Warm",
         "Plant": "Tomato",
+        "image": "/assets/tomato.jpeg",
         "pH": {
             "min": 6.0,
             "max": 6.5
@@ -186,11 +203,13 @@
             "min": 21.1,
             "max": 29.4
         },
-        "PlaceOnTower": "Bottom w/ support"
+        "PlaceOnTower": "Bottom w/ support",
+        "description": "Tomatoes thrive in hydroponic systems, yielding juicy, flavorful fruits. This method ensures consistent nutrient absorption, reduced water usage, and resistance to soil-borne diseases."
     },
     {
         "Season": "Warm",
         "Plant": "Watermelon",
+        "image": "/assets/watermelon.jpeg",
         "pH": {
             "min": 5.8,
             "max": 5.8
@@ -207,11 +226,13 @@
             "min": 21.1,
             "max": 32.2
         },
-        "PlaceOnTower": "Bottom"
+        "PlaceOnTower": "Bottom",
+        "description": "Watermelons are perfect for hydroponic farming, growing rapidly in warm climates with nutrient-rich solutions. They develop sweet, juicy fruits that are perfect for summer harvests."
     },
     {
         "Season": "Warm",
         "Plant": "Zucchini",
+        "image": "/assets/zuccini.jpeg",
         "pH": {
             "min": 6.0,
             "max": 6.0
@@ -228,11 +249,13 @@
             "min": 21.1,
             "max": 29.4
         },
-        "PlaceOnTower": "Bottom w/ support"
+        "PlaceOnTower": "Bottom w/ support",
+        "description": "Zucchini thrives in hydroponic setups, offering quick harvests with minimal resource use. Their controlled environment leads to tender, flavorful fruits ideal for various recipes."
     },
     {
         "Season": "Warm",
         "Plant": "Beans (1900-2100 PPM)",
+        "image": "/assets/beans.jpeg",
         "pH": {
             "min": 6.0,
             "max": 6.5
@@ -249,11 +272,13 @@
             "min": 21.1,
             "max": 29.4
         },
-        "PlaceOnTower": "Bottom or Middle w/ support"
+        "PlaceOnTower": "Bottom or Middle w/ support",
+        "description": "Beans are a resilient crop that benefits from hydroponic systems, growing rapidly with controlled nutrients. This ensures healthy plants and abundant harvests."
     },
     {
         "Season": "Warm",
         "Plant": "Broccoli",
+        "image": "/assets/broccoli.jpeg",
         "pH": {
             "min": 6.0,
             "max": 6.8
@@ -270,11 +295,13 @@
             "min": 18.3,
             "max": 23.9
         },
-        "PlaceOnTower": "Bottom or Middle"
+        "PlaceOnTower": "Bottom or Middle",
+        "description": "Broccoli thrives in warm seasons, requiring stable pH and nutrient levels. Hydroponics ensures precise nutrient delivery, consistent temperature, and faster growth, improving yield and quality."
     },
     {
         "Season": "Warm",
         "Plant": "Brussels Sprouts",
+        "image": "/assets/Brussels Sprouts.jpeg",
         "pH": {
             "min": 6.5,
             "max": 7.5
@@ -291,11 +318,13 @@
             "min": 18.3,
             "max": 23.9
         },
-        "PlaceOnTower": "Bottom"
+        "PlaceOnTower": "Bottom",
+        "description": "Brussels sprouts grow best in warm climates with optimal pH. Hydroponics offers controlled conditions, promoting uniform development and reducing susceptibility to pests."
     },
     {
         "Season": "Warm",
         "Plant": "Eggplant",
+        "image": "/assets/Eggplant.jpeg",
         "pH": {
             "min": 5.5,
             "max": 6.5
@@ -312,11 +341,13 @@
             "min": 21.1,
             "max": 32.2
         },
-        "PlaceOnTower": "Bottom or Middle w/ support"
+        "PlaceOnTower": "Bottom or Middle w/ support",
+        "description": "Eggplants require warm temperatures and nutrient-rich solutions. Hydroponics provides ideal growth conditions, enhancing fruit quality and reducing water usage."
     },
     {
         "Season": "Warm",
         "Plant": "Peppers (1900-2100 PPM)",
+        "image": "/assets/pepper.jpeg",
         "pH": {
             "min": 6.0,
             "max": 6.5
@@ -333,11 +364,13 @@
             "min": 21.1,
             "max": 32.2
         },
-        "PlaceOnTower": "Bottom or Middle w/ support"
+        "PlaceOnTower": "Bottom or Middle w/ support",
+        "description": "Peppers grow well in warm environments. Hydroponics allows precise control of nutrients and pH, ensuring consistent yield and vibrant fruit colors."
     },
     {
         "Season": "Warm",
         "Plant": "Cauliflower",
+        "image": "/assets/Cauliflower.jpeg",
         "pH": {
             "min": 6.5,
             "max": 7.0
@@ -354,11 +387,13 @@
             "min": 18.3,
             "max": 23.9
         },
-        "PlaceOnTower": "Bottom"
+        "PlaceOnTower": "Bottom",
+        "description": "Cauliflower needs steady nutrients and temperature to thrive. Hydroponics ensures optimal growth by providing controlled conditions and reducing soil-borne diseases."
     },
     {
         "Season": "Warm",
         "Plant": "Kale",
+        "image": "/assets/Kale.jpeg",
         "pH": {
             "min": 6.0,
             "max": 7.0
@@ -375,11 +410,13 @@
             "min": 10.0,
             "max": 20.0
         },
-        "PlaceOnTower": "Bottom"
+        "PlaceOnTower": "Bottom",
+        "description": "Kale thrives in cool temperatures and nutrient-rich solutions. Hydroponics accelerates growth, boosts nutrient density, and produces tender leaves."
     },
     {
         "Season": "Cool",
         "Plant": "Arugula",
+        "image": "/assets/Arugula.jpeg",
         "pH": {
             "min": 6.0,
             "max": 7.0
@@ -396,11 +433,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Middle or Top"
+        "PlaceOnTower": "Middle or Top",
+        "description": "Arugula grows quickly in cool climates. Hydroponics provides constant moisture and nutrients, ensuring fresh, flavorful leaves year-round."
     },
     {
         "Season": "Cool",
         "Plant": "Artichoke",
+        "image": "/assets/Artichoke.jpeg",
         "pH": {
             "min": 6.5,
             "max": 7.5
@@ -417,11 +456,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Bottom"
+        "PlaceOnTower": "Bottom",
+        "description": "Artichokes thrive in cool temperatures and require time to mature. Hydroponics optimizes nutrient delivery, ensuring robust growth and better yields."
     },
     {
         "Season": "Cool",
         "Plant": "Calendula",
+        "image": "/assets/Calendula.jpeg",
         "pH": {
             "min": 6.0,
             "max": 6.0
@@ -438,11 +479,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Bottom"
+        "PlaceOnTower": "Bottom",
+        "description": "Calendula thrives in cool conditions and requires minimal care. Hydroponics enhances growth by providing consistent moisture and nutrients."
     },
     {
         "Season": "Cool",
         "Plant": "Cilantro",
+        "image": "/assets/Cilantro.jpeg",
         "pH": {
             "min": 5.8,
             "max": 6.4
@@ -459,11 +502,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Bottom or Middle"
+        "PlaceOnTower": "Bottom or Middle",
+        "description": "Cilantro matures quickly in cool climates. Hydroponics ensures rapid growth and consistent harvests, producing flavorful leaves free from soil impurities."
     },
     {
         "Season": "Cool",
         "Plant": "Coriander",
+        "image": "/assets/corriender.jpeg",
         "pH": {
             "min": 5.8,
             "max": 6.4
@@ -480,11 +525,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Bottom or Middle"
+        "PlaceOnTower": "Bottom or Middle",
+        "Description": "Coriander thrives in hydroponic systems with controlled nutrients and pH, producing lush, flavorful leaves in minimal space. Its short maturity cycle makes it ideal for rapid, year-round growth."
     },
     {
         "Season": "Cool",
         "Plant": "Dandelion",
+        "image": "/assets/Dandelion.jpeg",
         "pH": {
             "min": 6.4,
             "max": 6.4
@@ -501,11 +548,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Middle or Top"
+        "PlaceOnTower": "Middle or Top",
+        "Description": "Dandelions grow rapidly in hydroponics, offering consistent, nutrient-rich harvests. Controlled environments enhance the quality of their tender leaves, perfect for fresh salads or teas."
     },
     {
         "Season": "Cool",
         "Plant": "Fennel",
+        "image": "/assets/Fennel.jpeg",
         "pH": {
             "min": 6.4,
             "max": 6.8
@@ -522,11 +571,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Top"
+        "PlaceOnTower": "Top",
+        "Description": "Hydroponics supports fennel growth by delivering precise nutrients for robust bulb development. Its aromatic leaves flourish in a clean, pest-free system."
     },
     {
         "Season": "Cool",
         "Plant": "Lemon Balm",
+        "image": "/assets/Lemon Balm.jpeg",
         "pH": {
             "min": 5.5,
             "max": 6.5
@@ -543,11 +594,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Bottom or Middle"
+        "PlaceOnTower": "Bottom or Middle",
+        "Description": "Lemon balm thrives in hydroponic systems, benefiting from controlled nutrients and hydration. Its vibrant, aromatic leaves make it a standout herb."
     },
     {
         "Season": "Cool",
         "Plant": "Lettuce",
+        "image": "/assets/Lettuce.jpeg",
         "pH": {
             "min": 5.5,
             "max": 6.0
@@ -564,11 +617,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Middle or Top"
+        "PlaceOnTower": "Middle or Top",
+        "Description": "Hydroponic lettuce grows rapidly with fresh, crisp leaves. The system ensures optimal hydration and nutrients, producing consistent, high-quality yields."
     },
     {
         "Season": "Cool",
         "Plant": "Menarda",
+        "image": "/assets/Menarda.jpeg",
         "pH": {
             "min": 5.5,
             "max": 6.0
@@ -585,11 +640,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Bottom or Middle"
+        "PlaceOnTower": "Bottom or Middle",
+        "Description": "Hydroponic systems nurture menarda with consistent nutrients and hydration, producing vibrant flowers and lush foliage ideal for decoration or herbal uses."
     },
     {
         "Season": "Cool",
         "Plant": "Mustard Greens",
+        "image": "/assets/Mustard green.jpeg",
         "pH": {
             "min": 6.0,
             "max": 7.5
@@ -606,11 +663,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Middle or Top"
+        "PlaceOnTower": "Middle or Top",
+        "Description": "Mustard greens flourish in hydroponic systems, offering tender leaves packed with nutrients. The controlled environment boosts growth and flavor intensity."
     },
     {
         "Season": "Cool",
         "Plant": "Nasturtiums",
+        "image": "/assets/Nasturtiums.jpeg",
         "pH": {
             "min": 6.0,
             "max": 7.5
@@ -627,11 +686,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Bottom or Middle"
+        "PlaceOnTower": "Bottom or Middle",
+        "Description": "Nasturtiums thrive in hydroponics, producing edible flowers and leaves. The system ensures vibrant growth and consistent blooms with minimal maintenance."
     },
     {
         "Season": "Cool",
         "Plant": "Oregano",
+        "image": "/assets/Oregano.jpeg",
         "pH": {
             "min": 6.0,
             "max": 7.5
@@ -648,11 +709,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Top or Middle"
+        "PlaceOnTower": "Top or Middle",
+        "Description": "Oregano thrives in hydroponic setups, benefiting from precise nutrient delivery. Its fragrant, robust leaves are perfect for culinary use."
     },
     {
         "Season": "Cool",
         "Plant": "Pansy",
+        "image": "/assets/Pansy.jpeg",
         "pH": {
             "min": 5.7,
             "max": 6.2
@@ -669,11 +732,14 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Top or Middle"
+        "PlaceOnTower": "Top or Middle",
+        "Description": "Pansies thrive in hydroponics, producing vibrant flowers ideal for decoration. Controlled conditions ensure healthy blooms and year-round beauty."
     },
+    
     {
         "Season": "Cool",
         "Plant": "Parsley",
+        "image": "/assets/Parsley.jpeg",
         "pH": {
             "min": 5.5,
             "max": 6.0
@@ -690,11 +756,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Middle or Top"
+        "PlaceOnTower": "Middle or Top",
+        "Description": "Hydroponic parsley thrives with consistent nutrients and hydration, producing vibrant, flavorful leaves ideal for culinary uses. Its controlled environment ensures optimal growth and minimal pest exposure."
     },
     {
         "Season": "Cool",
         "Plant": "Romaine",
+        "image": "/assets/Romaine.jpeg",
         "pH": {
             "min": 5.5,
             "max": 6.0
@@ -711,11 +779,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Middle or Top"
+        "PlaceOnTower": "Middle or Top",
+        "Description": "Hydroponic romaine lettuce delivers crisp, fresh leaves in a controlled environment, ensuring year-round growth with enhanced nutrient uptake for consistent quality."
     },
     {
         "Season": "Cool",
         "Plant": "Rosemary",
+        "image": "/assets/Rosemary.jpeg",
         "pH": {
             "min": 5.5,
             "max": 6.0
@@ -732,11 +802,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Top"
+        "PlaceOnTower": "Top",
+        "Description": "Rosemary thrives in hydroponic systems, producing aromatic and robust foliage. Its adaptability to controlled environments ensures consistent and flavorful yields."
     },
     {
         "Season": "Cool",
         "Plant": "Spinach",
+        "image": "/assets/Spinach.jpeg",
         "pH": {
             "min": 6.0,
             "max": 7.0
@@ -753,11 +825,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Middle or Top"
+        "PlaceOnTower": "Middle or Top",
+        "Description": "Spinach grows rapidly in hydroponic systems, producing nutrient-dense leaves with a consistent supply of water and nutrients. The system enhances growth speed and leaf quality."
     },
     {
         "Season": "Cool",
         "Plant": "Thyme",
+        "image": "/assets/Thyme.jpeg",
         "pH": {
             "min": 6.0,
             "max": 7.0
@@ -774,11 +848,13 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Top"
+        "PlaceOnTower": "Top",
+        "Description": "Hydroponic thyme benefits from precise nutrient delivery, producing fragrant and robust leaves. It’s an excellent choice for culinary and medicinal uses."
     },
     {
         "Season": "Cool",
         "Plant": "Zinnia",
+        "image": "/assets/Zinnia.jpeg",
         "pH": {
             "min": 5.5,
             "max": 6.5
@@ -795,6 +871,8 @@
             "min": 10,
             "max": 20
         },
-        "PlaceOnTower": "Middle or Top"
+        "PlaceOnTower": "Middle or Top",
+        "Description": "Zinnias flourish in hydroponic systems, producing vibrant, pest-free blooms. Controlled conditions enhance their color and longevity, perfect for decorative uses."
     }
+    
 ]

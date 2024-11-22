@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link"
 import { PiTreeFill, PiPlantFill, PiLeafFill } from "react-icons/pi";
 import { FaCaretDown } from "react-icons/fa";
@@ -13,15 +14,23 @@ import {
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
 import Image from "next/image";
+import { useUser } from "@/context/UserContext";
+import { useRouter } from "next/navigation";
 
 
 export default function Header() {
+    const {user, logout} = useUser();
+    const router = useRouter();
+
+    const handleLogout = async () => {
+         logout();
+        router.push('/');
+    }
 
     const products = [
         {
@@ -76,7 +85,7 @@ export default function Header() {
                         <SheetContent side="left">
                             <SheetHeader>
                                 <SheetTitle> <Link href="/" className="hover:scale-[1.03] duration-200">
-                                    <Image src="/assets/Logo.svg" alt="FarmIsha_Logo"  height={40} width={130} className="w-[130px] h-[40px] cursor-pointer " />
+                                    <Image src="/assets/Logo.svg" alt="FarmIsha_Logo" height={40} width={130} className="w-[130px] h-[40px] cursor-pointer " />
                                 </Link></SheetTitle>
                                 {/* <SheetDescription className="!font-semibold  !py-10 text-2xl">
                                     Menu
@@ -137,11 +146,14 @@ export default function Header() {
 
                                 {/* ------ GETTING STARTED ----- */}
                                 <div className="absolute bottom-6 w-full gap-2 flex flex-col items-center justify-center">
-                                    {/* <Link href="/register" className="">
-                                        <span className="bg-green3 hover:bg-green4 px-8 py-2 rounded-3xl text-white font-semibold text-sm duration-300">Get Started</span>
-                                    </Link> */}
-                                        <Link href='/login' className="w-full bg-green1 text-green3 duration-300 rounded-md py-2 px-4  hover:drop-shadow-sm font-medium text-sm  flex-gtm-center gap-x-2">  Login</Link>
-                                        <Link href='/register' className="w-full bg-green3 text-white duration-300 rounded-md py-2 px-4 hover:drop-shadow-sm font-medium text-sm  flex-gtm-center gap-x-2"> Register</Link>
+                                {user ?
+                                    <span onClick={handleLogout} className="w-full bg-green1 hover:bg-red-400 text-red-400  hover:text-white duration-300 rounded-md py-2 px-4  hover:drop-shadow-md font-medium text-sm  flex-gtm-center gap-x-2 cursor-pointer "> Logout</span>
+                                    : <>
+                                    <a href='/login' className="w-full bg-green1 text-green3 duration-300 rounded-md py-2 px-4  hover:drop-shadow-sm font-medium text-sm  flex-gtm-center gap-x-2"> Login</a>
+                                    <Link href='/register' className="w-full bg-green3 text-white duration-300 rounded-md py-2 px-4 hover:drop-shadow-sm font-medium text-sm  flex-gtm-center gap-x-2"> Register</Link>
+                                    </>
+                                }
+                                    
                                 </div>
 
                             </div>
@@ -202,23 +214,27 @@ export default function Header() {
                     <Link href="/blogs">
                         <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">Blogs</span>
                     </Link>
-                   
+
 
                     <DropdownMenu modal={false} >
                         <DropdownMenuTrigger className="outline-none">
                             <span className="bg-green3 hover:bg-green4 px-5 py-2 rounded-3xl text-white font-semibold text-sm duration-300 flex justify-between  gap-1">
-                                Get Started <FaCaretDown className="text-white text-lg"/>
+                                Get Started <FaCaretDown className="text-white text-lg" />
                             </span>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent >
-                           
-                                    <DropdownMenuItem  className=" hover:bg-[#06B612] hover:text-white ">
-                                        <a href='/login' className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"> <PiLeafFill/>  Login</a>
-                                    </DropdownMenuItem>
-                                    <DropdownMenuItem  className=" hover:bg-[#06B612] hover:text-white ">
-                                        <a href='/register' className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"><PiPlantFill/> Register</a>
-                                    </DropdownMenuItem>
-                               
+
+                            <DropdownMenuItem className=" hover:bg-[#06B612] hover:text-white ">
+                                {user ?
+                                    <span onClick={handleLogout} className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"> <PiLeafFill />  Logout</span>
+                                    :
+                                    <a href='/login' className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"> <PiLeafFill />  Login</a>
+                                }
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className=" hover:bg-[#06B612] hover:text-white ">
+                                <a href='/register' className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"><PiPlantFill /> Register</a>
+                            </DropdownMenuItem>
+
 
                         </DropdownMenuContent>
                     </DropdownMenu>
