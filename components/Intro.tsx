@@ -9,6 +9,9 @@ import { usePathname } from 'next/navigation'
 import EmblaCarousel from "./EmblaCarousel"
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
+import { useTranslation } from 'react-i18next';
+
+
 
 // interface IUser {
 //   fullName: string;
@@ -16,7 +19,9 @@ import 'react-phone-input-2/lib/style.css'
 //   password: string;
 //   PIN: string;
 // }
-function Intro() {
+ function Intro() {
+
+  const { t } = useTranslation();
   const { user, setUser } = useUser()
   const path = usePathname()
   const [phoneNumber, setPhoneNumber] = useState('')
@@ -75,6 +80,7 @@ function Intro() {
   
   useEffect(() => {
     const loadSlides = async () => {
+      
       await new Promise(resolve => setTimeout(resolve, 100))
       setSlides([
         { image: "/assets/Intro1.svg", alt: "Image 1" },
@@ -99,13 +105,14 @@ function Intro() {
     <div className={`flex flex-col-reverse lg:flex-row justify-between items-center min-h-[90vh] py-10`}>
       <div className="w-full flex flex-col items-center lg:items-start justify-start gap-y-5 lg:gap-y-10">
         <div className="w-full flex flex-col text-xl sm:text-3xl lg:text-5xl text-center lg:text-start font-bold pt-5 lg:pt-0">
-          <span className="text-head tracking-wide pb-1">Future Ready Farming For</span>
-          <span className="text-green3 tracking-wide">Fresh Harvests</span>
+          <span className="text-head tracking-wide pb-1">{t('intro_line1')}</span>
+          <span className="text-green3 tracking-wide">{t('intro_line2')}</span>
         </div>
         <div className="w-full font-light lg:font-medium text-sm lg:text-lg text-gray text-center lg:text-start tracking-wider">
-          FarmIsha brings you sustainable hydroponic<br />farming solutions for fresh, soil-free<br />produce year-round.
+          {t('intro_desc')}
+          {/* FarmIsha brings you sustainable hydroponic<br />farming solutions for fresh, soil-free<br />produce year-round. */}
         </div>
-        {path === "/login" ? (
+        {path === "/hi/login" || path==='/mr/login' ||path==='/pa/login' || path==='/bho/login' || path==='/login' ? (
           <div className="w-full flex flex-col items-center justify-center gap-4">
             {!user  && !loading ?
               <form onSubmit={handleLogin} className="space-x-0 lg:space-x-4 space-y-3 lg:space-y-0 flex flex-col lg:flex-row items-center justify-center">
@@ -132,7 +139,7 @@ function Intro() {
                 </span>
 
 
-                <button type='submit' className='font-semibold tracking-wide rounded-3xl px-6 py-2 bg-green3 hover:bg-green4 duration-200 text-white'>Login</button>
+                <button type='submit' className='font-semibold tracking-wide rounded-3xl px-6 py-2 bg-green3 hover:bg-green4 duration-200 text-white'>{t('login')}</button>
                 {/* <Link href={"/"} className="font-semibold tracking-wide rounded-3xl px-6 py-2 bg-green3 hover:bg-green4 duration-200 text-white">
                 Login
               </Link> */}
@@ -141,7 +148,7 @@ function Intro() {
               <div className={`w-full h-20   rounded-lg p-1`}>
                 { loading ? <span className="text-green3 gap-2 w-full h-full flex flex-col items-center justify-center ">
                   <span className="border-4 !border-l-green3 border-green1 duration-1000 ease rounded-full h-10 w-10  animate-spin"></span>
-                  <span className="text-green3 text-sm font-semibold">Logging you in ...</span>
+                  <span className="text-green3 text-sm font-semibold">{t('logging')} ...</span>
                 </span>
                   : <> 
                 <span className="gap-2 w-full flex-gtm-center">
@@ -155,7 +162,7 @@ function Intro() {
           </div>
    ) : (
           <Link href={"/login"} className="mt-2 lg:mt-5 font-semibold tracking-wide rounded-3xl px-6 py-2 bg-green3 hover:bg-green4 duration-200 text-white text-sm lg:text-base">
-            Start Eating Fresh
+            {t('start_eating_fresh')}
           </Link>
         )}
       </div>
