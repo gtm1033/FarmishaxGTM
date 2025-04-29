@@ -57,64 +57,46 @@ const page = () => {
         { image: "/assets/Intro3.jpg", alt: "Image 6" }
     ]
 
-    const fetchUser = async () => {
-    if (!id) {
-        setError('User ID is missing in the route.');
-        return;
+  const fetchUser = async () => {
+        if (!id) {
+            setError('User ID is missing in the route.');
+            return;
+        }
+
+        try {
+            const response = await fetch(`/api/user/${id}`, { method: 'GET' });
+            if (!response.ok) {
+                throw new Error(`Failed to fetch user. Status: ${response.status}`);
+            }
+            const data = await response.json();
+            // console.log('User data:', data.data);
+            setUser(data?.data);
+            // console.log('Dahsbaaord context User data:', user);
+            setLoading(false)
+            setLoadingCrops(true)
+            const kelvinTemp = Number(data?.temperature);
+const celsiusTemp = kelvinTemp - 273.15;
+console.log('Temperature in C:', celsiusTemp);
+            const cropData = await fetch(`/api/crops`, { method: 'GET' })
+            const crops = await cropData.json()
+const favourableCrops = crops.filter((crop: any) => {
+    const min = Number(crop?.Temperature?.min);
+    const max = Number(crop?.Temperature?.max);
+    const inRange = celsiusTemp >= min && celsiusTemp <= max;
+    if (!inRange) {
+        console.log(`Excluded: ${crop.name} — range: ${min}-${max}`);
     }
-
-    try {
-        setLoading(true);
-        setLoadingCrops(false);
-        setError(null);
-
-        // Fetch user data
-        const response = await fetch(`/api/user/${id}`, { method: 'GET' });
-        if (!response.ok) {
-            throw new Error(`Failed to fetch user. Status: ${response.status}`);
+    return inRange;
+});            
+            console.log('Favourable Crops- ', favourableCrops)
+            setLoadingCrops(false)
+            setFavourableCrops(favourableCrops)
+        } catch (error) {
+            console.error('An error occurred:', error);
+            setError('Failed to fetch user data.');
         }
+    };
 
-        const userData = await response.json();
-        const user = userData?.data;
-
-        if (!user || typeof user.temperature !== 'number') {
-            throw new Error('Invalid user data or missing temperature.');
-        }
-
-        setUser(user);
-        setLoading(false);
-
-        // Begin fetching crops
-        setLoadingCrops(true);
-        const cropResponse = await fetch(`/api/crops`, { method: 'GET' });
-        if (!cropResponse.ok) {
-            throw new Error(`Failed to fetch crops. Status: ${cropResponse.status}`);
-        }
-
-        const cropData = await cropResponse.json();
-        const crops = Array.isArray(cropData?.crops) ? cropData.crops : cropData;
-
-        // Temperature conversion and crop filtering
-        const kelvinTemp = Number(user.temperature);
-        const celsiusTemp = kelvinTemp - 273.15;
-
-        const favourableCrops = crops.filter((crop: any) => {
-            const min = Number(crop?.Temperature?.min);
-            const max = Number(crop?.Temperature?.max);
-
-            const validRange = !isNaN(min) && !isNaN(max);
-            return validRange && celsiusTemp >= min && celsiusTemp <= max;
-        });
-
-        setFavourableCrops(favourableCrops);
-        setLoadingCrops(false);
-    } catch (error: any) {
-        console.error('An error occurred in fetchUser:', error?.message || error);
-        setError(error?.message || 'Failed to fetch user or crops data.');
-        setLoading(false);
-        setLoadingCrops(false);
-    }
-};
 
     const handleOpen = (index: number) => {
         setOpen(true)
