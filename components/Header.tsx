@@ -21,9 +21,11 @@ import {
 import Image from "next/image";
 import { useUser } from "@/context/UserContext";
 import { useRouter } from "next/navigation";
+import { useTranslation } from "react-i18next";
 
 
 export default function Header() {
+    const {t} = useTranslation('default')
     const {user, logout} = useUser();
     const router = useRouter();
 
@@ -96,14 +98,14 @@ export default function Header() {
                             {/* -----SHEET CONTENT MENU ITEMS---- */}
                             <div className="flex flex-col lg:hidden h-full w-full  space-y-8  pt-10 relative ">
                                 <Link href="/about">
-                                    <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">About Us</span>
+                                    <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">{t('about_us')}</span>
                                 </Link>
 
 
                                 <DropdownMenu modal={false} >
                                     <DropdownMenuTrigger className="outline-none">
                                         <span className="flex items-center gap-1 text-sm outline-none text-black font-medium hover:text-green3" >
-                                            Products <Image height={18} width={18} src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
+                                            {t('products')} <Image height={18} width={18} src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
                                         </span>
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent >
@@ -121,7 +123,7 @@ export default function Header() {
                                 <DropdownMenu modal={false} >
                                     <DropdownMenuTrigger className="outline-none">
                                         <span className="flex items-center gap-1 text-sm outline-none text-black font-medium hover:text-green3">
-                                            AI Solutions <Image height={18} width={18} src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
+                                            {t('ai_solutions')} <Image height={18} width={18} src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
                                         </span>
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent >
@@ -138,19 +140,19 @@ export default function Header() {
 
 
                                 <Link href="/crops">
-                                    <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">Hydroponics Crops</span>
+                                    <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">{t('hydroponic_crops')}</span>
                                 </Link>
                                 <Link href="/blogs">
-                                    <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">Blogs</span>
+                                    <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">{t('blogs')}</span>
                                 </Link>
 
                                 {/* ------ GETTING STARTED ----- */}
                                 <div className="absolute bottom-6 w-full gap-2 flex flex-col items-center justify-center">
                                 {user ?
-                                    <span onClick={handleLogout} className="w-full bg-green1 hover:bg-red-400 text-red-400  hover:text-white duration-300 rounded-md py-2 px-4  hover:drop-shadow-md font-medium text-sm  flex-gtm-center gap-x-2 cursor-pointer "> Logout</span>
+                                    <span onClick={handleLogout} className="w-full bg-green1 hover:bg-red-400 text-red-400  hover:text-white duration-300 rounded-md py-2 px-4  hover:drop-shadow-md font-medium text-sm  flex-gtm-center gap-x-2 cursor-pointer "> {t('logout')}</span>
                                     : <>
-                                    <a href='/login' className="w-full bg-green1 text-green3 duration-300 rounded-md py-2 px-4  hover:drop-shadow-sm font-medium text-sm  flex-gtm-center gap-x-2"> Login</a>
-                                    <Link href='/register' className="w-full bg-green3 text-white duration-300 rounded-md py-2 px-4 hover:drop-shadow-sm font-medium text-sm  flex-gtm-center gap-x-2"> Register</Link>
+                                    <a href='/login' className="w-full bg-green1 text-green3 duration-300 rounded-md py-2 px-4  hover:drop-shadow-sm font-medium text-sm  flex-gtm-center gap-x-2"> {t('login')}</a>
+                                    <Link href='/register' className="w-full bg-green3 text-white duration-300 rounded-md py-2 px-4 hover:drop-shadow-sm font-medium text-sm  flex-gtm-center gap-x-2"> {t('register')}</Link>
                                     </>
                                 }
                                     
@@ -168,14 +170,14 @@ export default function Header() {
                 </div>
                 <div className="hidden lg:flex w-full justify-end items-center space-x-8">
                     <Link href="/about">
-                        <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">About Us</span>
+                        <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">{t('about_us')}</span>
                     </Link>
 
 
                     <DropdownMenu modal={false} >
                         <DropdownMenuTrigger className="outline-none">
                             <span className="flex items-center gap-1 text-sm outline-none text-black font-medium hover:text-green3" >
-                                Products <Image height={18} width={18} src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
+                                {t('products')} <Image height={18} width={18} src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
                             </span>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent >
@@ -193,7 +195,7 @@ export default function Header() {
                     <DropdownMenu modal={false} >
                         <DropdownMenuTrigger className="outline-none">
                             <span className="flex items-center gap-1 text-sm outline-none text-black font-medium hover:text-green3">
-                                AI Solutions <Image height={18} width={18} src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
+                                {t('ai_solutions')} <Image height={18} width={18} src="/assets/arrow-down.svg" alt="drop_down" className="w-[18px] h-[18px]" />
                             </span>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent >
@@ -209,30 +211,30 @@ export default function Header() {
                     </DropdownMenu>
 
                     <Link href="/crops">
-                        <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">Hydroponics Crops</span>
+                        <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">{t('hydroponic_crops')}</span>
                     </Link>
                     <Link href="/blogs">
-                        <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">Blogs</span>
+                        <span className="text-black hover:text-[#06B612] hover:drop-shadow-sm font-medium text-sm duration-300">{t('blogs')}</span>
                     </Link>
 
 
                     <DropdownMenu modal={false} >
                         <DropdownMenuTrigger className="outline-none">
                             <span className="bg-green3 hover:bg-green4 px-5 py-2 rounded-3xl text-white font-semibold text-sm duration-300 flex justify-between  gap-1">
-                                Get Started <FaCaretDown className="text-white text-lg" />
+                                {t('get_started')} <FaCaretDown className="text-white text-lg" />
                             </span>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent >
 
                             <DropdownMenuItem className=" hover:bg-[#06B612] hover:text-white ">
                                 {user ?
-                                    <span onClick={handleLogout} className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"> <PiLeafFill />  Logout</span>
+                                    <span onClick={handleLogout} className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"> <PiLeafFill />  {t('logout')}</span>
                                     :
-                                    <a href='/login' className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"> <PiLeafFill />  Login</a>
+                                    <a href='/login' className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"> <PiLeafFill />  {t('login')}</a>
                                 }
                             </DropdownMenuItem>
                             <DropdownMenuItem className=" hover:bg-[#06B612] hover:text-white ">
-                                <a href='/register' className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"><PiPlantFill /> Register</a>
+                                <a href='/register' className="w-full hover:drop-shadow-sm font-medium text-sm  flex gap-x-2 items-center"><PiPlantFill /> {t('register')}</a>
                             </DropdownMenuItem>
 
 

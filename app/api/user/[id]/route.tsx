@@ -32,6 +32,7 @@ export async function GET(request: Request, { params }: { params: { id: string }
         }
 
         const weatherData = await weather.json();
+        console.log("====== weather data : " , weatherData)
         const temperature = weatherData?.main?.temp;
 
         if (!temperature) {

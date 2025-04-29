@@ -33,7 +33,9 @@ export default function LanguageChanger() {
     document.cookie = `NEXT_LOCALE=${newLocale};expires=${date.toUTCString()};path=/`;
 
     // Update i18n
-    await initTranslations(newLocale, ['Home']); // Assuming 'default' namespace is mandatory
+    // await initTranslations(newLocale, ['Home']); // Assuming 'default' namespace is mandatory
+    await initTranslations(newLocale, ['default', 'Home', 'Dashboard']);
+
 
     // Update local state
     setCurrentLocale(newLocale);
@@ -54,10 +56,10 @@ export default function LanguageChanger() {
     <select
       onChange={handleChange}
       value={currentLocale}
-      className="bg-green1 text-green3 font-semibold text-sm outline-none"
+      className="bg-green1 text-green3 cursor-pointer font-semibold text-sm outline-none px-2 py-1 rounded"
     >
       {i18nConfig.locales.map((locale) => (
-        <option key={locale} value={locale}>
+        <option key={locale} value={locale} className='cursor-pointer'>
           {locale.charAt(0).toUpperCase() + locale.slice(1)}
         </option>
       ))}

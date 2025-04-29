@@ -12,6 +12,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import { useUser } from '@/context/UserContext'
+import { useTranslation } from 'react-i18next'
 
 interface IUser {
     _id: string;
@@ -26,23 +27,14 @@ interface apiResponse {
     data: IUser;
     temperature: number;
 }
-// interface IUser {
-//     fullName: string;
-//     phone: string;
-//     password: string;
-//     PIN: string;
-// }
+
 
 const page = () => {
+    const { t } = useTranslation('Dashboard');
     const { user, setUser } = useUser()
     const router = useRouter()
     const { id } = useParams()
 
-    console.log('Dashboard Params :', useParams())
-    console.log('Dashboard Context User data:', user)
-    console.log('Dashboard User ID:', id , typeof id)
-
-    // const [user, setUser] = useState<IUser>()
     const [error, setError] = useState<string | null>(null)
     const [loading, setLoading] = useState<boolean>(true)
     const [loadingCrops, setLoadingCrops] = useState<boolean>()
@@ -105,10 +97,10 @@ const page = () => {
 
     if (loading) {
         return (
-            <div className='min-h-[92vh] p-2 grid grid-cols-1 md:grid-cols-3  gap-3 w-full animate-pulse ease duration-1000 '>
-                <div className="bg-green1 opacity-50 rounded-md col-span-1 md:col-span-2 w-full h-full"></div>
-                <div className="bg-green1 opacity-50 rounded-md  w-full h-full"></div>
-                <div className="bg-green1 opacity-50 col-span-1 md:col-span-3 rounded-md  w-full h-full"></div>
+            <div className='min-h-[92vh] p-2 grid grid-cols-1 md:grid-cols-3  gap-6 w-full animate-pulse ease duration-1000 '>
+                <div className="bg-green1 opacity-40 rounded-md col-span-1 md:col-span-2 w-full h-full"></div>
+                <div className="bg-green1 opacity-40 rounded-md  w-full h-full"></div>
+                <div className="bg-green1 opacity-40 col-span-1 md:col-span-3 rounded-md  w-full h-full"></div>
             </div>
         );
     }
@@ -135,11 +127,11 @@ const page = () => {
                             <div className="w-full flex flex-col-reverse sm:flex-row p-1 sm:p-4">
                                 <div className='flex flex-col w-full justify-evenly items-between  '>
                                     <div className="w-full flex flex-col sm:flex-row  text-xl sm:text-2xl lg:text-4xl text-center lg:text-start font-bold pt-5 lg:pt-0">
-                                        <span className="text-head tracking-wide pb-1">Welcome, </span>
+                                        <span className="text-head tracking-wide pb-1">{t('dashboard_welcome')} </span>
                                         <span className="text-green3 tracking-wide px-2">{user?.fullName}</span>
                                     </div>
                                     <div className="w-full font-light lg:font-medium text-sm lg:text-lg text-gray text-center lg:text-start tracking-wider">
-                                        Discover crops suitable for your region and start farming! <br />  Based on your region's  climate and temperature conditions, <br />we provide a tailored list of crops most suitable for <br />cultivation in your area.
+                                        {t('dashboard_intro')}
 
                                     </div>
                                 </div>

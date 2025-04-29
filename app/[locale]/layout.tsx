@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
-// GLOBAL CSS
 import "../globals.css";
-// POPPINS GOOGLE FONT
 import { Poppins } from "@next/font/google";
-// COMPONENTS - HEADER, FOOTER
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-// CONTEXT - PROVIDER
 import { UserProvider } from "@/context/UserContext";
-// WEB ANALYTICS VERCEL
 import { Analytics } from "@vercel/analytics/react";
-// LANGUAGE CHANGER
+import initTranslations from "../i18n";
 import LanguageChanger from "@/components/LanguageChanger";
-
+import TranslationProvider from "@/components/TranslationProvider";
 import i18nConfig from "@/i18nConfig";
 import { dir } from "i18next";
 
-// POPPINS FONT CONFIG
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
@@ -32,16 +26,22 @@ export const metadata: Metadata = {
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  params: { locale: string }; // Ensure locale is passed correctly
+  params: { locale: string }; 
 }
 
-export default function RootLayout({ children, params: { locale } }: RootLayoutProps) {
-  const direction = dir(locale); // Determine text direction
+const i18nNamespaces = ["default", "Home", "Dashboard"]; 
 
-  // Validate locale
+export default async function RootLayout({
+  children,
+  params: { locale },
+}: RootLayoutProps) {
+  const direction = dir(locale); 
+
   if (!i18nConfig.locales.includes(locale)) {
     console.warn(`Unsupported locale "${locale}" detected.`);
   }
+
+  const { resources } = await initTranslations(locale, i18nNamespaces);
 
   return (
     <html lang={locale} dir={direction}>
@@ -49,13 +49,19 @@ export default function RootLayout({ children, params: { locale } }: RootLayoutP
         className={`${poppins.variable} font-poppins bg-white pt-2 sm:pt-6 lg:pt-8 pb-0 px-2 sm:px-12 lg:px-20 overflow-x-hidden`}
       >
         <UserProvider>
-          <div className="absolute top-0 right-2 h-6 w-10 flex justify-end items-center">
-            <LanguageChanger />
-          </div>
-          <Header />
-          {children}
-          <Analytics />
-          <Footer />
+          <TranslationProvider
+            locale={locale}
+            namespaces={i18nNamespaces}
+            resources={resources}
+          >
+            <div className="absolute top-0 right-0 h-6 w-10 flex justify-end items-center">
+              <LanguageChanger />
+            </div>
+            <Header />
+            {children}
+            <Analytics />
+            <Footer />
+          </TranslationProvider>
         </UserProvider>
       </body>
     </html>
