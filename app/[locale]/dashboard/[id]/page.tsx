@@ -76,8 +76,9 @@ const page = () => {
             setLoadingCrops(true)
             const cropData = await fetch(`/api/crops`, { method: 'GET' })
             const crops = await cropData.json()
+            console.log("\n\ncrops loaded :" , crops , "\n\n");
             const favourableCrops = crops.filter((crop: any) => ((Number(data.temperature) - 273.15) >= Number(crop.Temperature.min) && (Number(data.temperature) - 273.15) <= Number(crop.Temperature.max)))
-            // console.log('Favourable Crops- ', favourableCrops)
+            console.log('Favourable Crops- ', favourableCrops)
             setLoadingCrops(false)
             setFavourableCrops(favourableCrops)
         } catch (error) {
