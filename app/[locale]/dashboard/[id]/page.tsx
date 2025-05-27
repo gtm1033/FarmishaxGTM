@@ -75,23 +75,27 @@ const page = () => {
             setLoading(false)
             setLoadingCrops(true)
             const kelvinTemp = Number(data?.temperature);
-const celsiusTemp = kelvinTemp - 273.15;
-console.log('Temperature in C:', celsiusTemp);
+            const celsiusTemp = kelvinTemp - 273.15;
+            console.log('Temperature in K:', kelvinTemp);
+            console.log('Temperature in C:', celsiusTemp);
             const cropData = await fetch(`/api/crops`, { method: 'GET' })
             const crops = await cropData.json()
-const favourableCrops = crops.filter((crop: any) => {
+            let inRange;
+const favourableCrops = crops?.filter((crop: any) => {
             const min = parseFloat(crop?.Temperature?.min);
             const max = parseFloat(crop?.Temperature?.max);
+    
 
             const validRange = !isNaN(min) && !isNaN(max);
-            const inRange = validRange && celsiusTemp >= min && celsiusTemp <= max;
+           inRange = validRange && celsiusTemp >= min && celsiusTemp <= max;
 
             if (!inRange) {
-                console.log(`Excluded: ${crop.Plant} — Range: ${min} to ${max}, Temp: ${celsiusTemp}`);
+                //console.log(`Excluded: ${crop.Plant} — Range: ${min} to ${max}, Temp: ${celsiusTemp}`);
             }
 
             return inRange;
         }); 
+            console.log("IN range : ", inRange);
             console.log('Favourable Crops- ', favourableCrops)
             setLoadingCrops(false)
             setFavourableCrops(favourableCrops)
