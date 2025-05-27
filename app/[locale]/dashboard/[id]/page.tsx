@@ -69,7 +69,7 @@ const page = () => {
                 throw new Error(`Failed to fetch user. Status: ${response.status}`);
             }
             const data = await response.json();
-             console.log('User data:', data.data);
+             console.log('Response form login api, data :', data);
             setUser(data?.data);
             console.log('Dahsbaaord context User data:', user);
             setLoading(false)
