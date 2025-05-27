@@ -40,7 +40,7 @@
         },
         "Temperature": {
             "min": 18.3,
-            "max": 29.4
+            "max": 43.4
         },
         "PlaceOnTower": "Bottom w/ support",
         "description": "Cucumbers grow exceptionally well in hydroponic systems, benefiting from controlled environments that promote rapid growth. These fast-maturing plants require minimal effort while delivering consistent yields, making them ideal for both beginners and seasoned growers."
@@ -63,7 +63,7 @@
         },
         "Temperature": {
             "min": 21.1,
-            "max": 32.2
+            "max": 43.2
         },
         "PlaceOnTower": "Bottom w/ support",
         "description": "Melons are a sweet and refreshing crop that thrive in warm temperatures. Hydroponic systems ensure optimal water and nutrient delivery, promoting faster growth and higher sugar content in the fruit. Ideal for controlled environments."
@@ -86,7 +86,7 @@
         },
         "Temperature": {
             "min": 23.9,
-            "max": 32.2
+            "max": 45.2
         },
         "PlaceOnTower": "Bottom w/ support",
         "description": "Okra, known for its versatility in cooking, benefits greatly from hydroponic growth. This warm-season crop grows faster and produces tender pods in nutrient-rich and well-maintained environments."
@@ -109,7 +109,7 @@
         },
         "Temperature": {
             "min": 21.1,
-            "max": 32.2
+            "max": 42.2
         },
         "PlaceOnTower": "Bottom or Middle w/ support",
         "description": "Peppers are a staple in many cuisines and thrive in hydroponic setups. With controlled conditions, they produce larger, more flavorful fruits while conserving space and resources."
@@ -155,7 +155,7 @@
         },
         "Temperature": {
             "min": 21.1,
-            "max": 29.4
+            "max": 45.4
         },
         "PlaceOnTower": "Bottom w/ support",
         "description": "Summer squash grows quickly in hydroponic systems, yielding tender, nutrient-rich fruits. Its controlled environment helps avoid soil-borne diseases and ensures steady production."
@@ -224,7 +224,7 @@
         },
         "Temperature": {
             "min": 21.1,
-            "max": 32.2
+            "max": 42.2
         },
         "PlaceOnTower": "Bottom",
         "description": "Watermelons are perfect for hydroponic farming, growing rapidly in warm climates with nutrient-rich solutions. They develop sweet, juicy fruits that are perfect for summer harvests."
@@ -339,7 +339,7 @@
         },
         "Temperature": {
             "min": 21.1,
-            "max": 32.2
+            "max": 41.2
         },
         "PlaceOnTower": "Bottom or Middle w/ support",
         "description": "Eggplants require warm temperatures and nutrient-rich solutions. Hydroponics provides ideal growth conditions, enhancing fruit quality and reducing water usage."
@@ -362,7 +362,7 @@
         },
         "Temperature": {
             "min": 21.1,
-            "max": 32.2
+            "max": 42.2
         },
         "PlaceOnTower": "Bottom or Middle w/ support",
         "description": "Peppers grow well in warm environments. Hydroponics allows precise control of nutrients and pH, ensuring consistent yield and vibrant fruit colors."
