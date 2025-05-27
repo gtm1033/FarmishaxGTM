@@ -69,33 +69,34 @@ const page = () => {
                 throw new Error(`Failed to fetch user. Status: ${response.status}`);
             }
             const data = await response.json();
-            // console.log('User data:', data.data);
+             console.log('User data:', data.data);
             setUser(data?.data);
-            // console.log('Dahsbaaord context User data:', user);
+            console.log('Dahsbaaord context User data:', user);
             setLoading(false)
             setLoadingCrops(true)
             const kelvinTemp = Number(data?.temperature);
             const celsiusTemp = kelvinTemp - 273.15;
+            
             console.log('Temperature in K:', kelvinTemp);
             console.log('Temperature in C:', celsiusTemp);
+            
             const cropData = await fetch(`/api/crops`, { method: 'GET' })
             const crops = await cropData.json()
-            let inRange;
-const favourableCrops = crops?.filter((crop: any) => {
-            const min = parseFloat(crop?.Temperature?.min);
-            const max = parseFloat(crop?.Temperature?.max);
+            console.log("Crops data :" , crops[0])
+//            let inRange;
+//const favourableCrops = crops?.filter((crop: any) => {
+  //          const min = parseFloat(crop?.Temperature?.min);
+    //        const max = parseFloat(crop?.Temperature?.max);
     
 
-            const validRange = !isNaN(min) && !isNaN(max);
-           inRange = validRange && celsiusTemp >= min && celsiusTemp <= max;
+      //      const validRange = !isNaN(min) && !isNaN(max);
+        //   inRange = validRange && celsiusTemp >= min && celsiusTemp <= max;
 
-            if (!inRange) {
-                //console.log(`Excluded: ${crop.Plant} — Range: ${min} to ${max}, Temp: ${celsiusTemp}`);
-            }
 
-            return inRange;
-        }); 
-            console.log("IN range : ", inRange);
+            //return inRange; }); 
+            //console.log("IN range : ", inRange);
+             const favourableCrops = crops?.filter((crop: any) => (celsiusTemp >= Number(crop?.Temperature.min) && celsiusTemp <= Number(crop.Temperature.max)))
+            // console.log('Favourable Crops- ', favourableCrops)
             console.log('Favourable Crops- ', favourableCrops)
             setLoadingCrops(false)
             setFavourableCrops(favourableCrops)
